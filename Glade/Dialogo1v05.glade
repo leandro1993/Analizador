@@ -1,0 +1,1681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.3 -->
+<interface>
+  <requires lib="gtk+" version="3.12"/>
+  <!-- interface-css-provider-path StyleIU.css -->
+  <object class="GtkDialog" id="Dialogo0">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Carga de paciente</property>
+    <property name="modal">True</property>
+    <property name="window_position">center</property>
+    <property name="type_hint">normal</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="dialog-vbox2">
+        <property name="can_focus">False</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <property name="hexpand">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">8</property>
+        <property name="homogeneous">True</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="dialog-action_area2">
+            <property name="can_focus">False</property>
+            <property name="margin_left">9</property>
+            <property name="margin_right">16</property>
+            <property name="margin_top">24</property>
+            <property name="layout_style">center</property>
+            <child>
+              <object class="GtkButton" id="button2">
+                <property name="label" translatable="yes">CODIGO DE BARRAS</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="margin_left">20</property>
+                <property name="margin_right">21</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button3">
+                <property name="label" translatable="yes">MANUAL</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="margin_left">19</property>
+                <property name="margin_right">21</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="padding">119</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label5">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">ELIGA EL METODO DE INGRESO DE LOS DATOS</property>
+            <attributes>
+              <attribute name="weight" value="ultrabold"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="2">button2</action-widget>
+      <action-widget response="1">button3</action-widget>
+    </action-widgets>
+  </object>
+  <object class="GtkDialog" id="lectorCodigodeBarras">
+    <property name="can_focus">False</property>
+    <property name="type_hint">dialog</property>
+    <property name="transient_for">Dialogo0</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="dialog-vbox5">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="dialog-action_area5">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="button5">
+                <property name="label" translatable="yes">Cancelar</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image_position">right</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="box1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Lector de código de barras</property>
+                <attributes>
+                  <attribute name="font-desc" value="Ubuntu Light 10"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="Codigo">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="margin_top">61</property>
+                <property name="margin_bottom">16</property>
+                <signal name="activate" handler="capturar_codigo" swapped="no"/>
+                <signal name="button-press-event" handler="capturar_codigo" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label52">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_bottom">54</property>
+                <property name="label" translatable="yes">Escanee el código de barras de la muestra</property>
+                <attributes>
+                  <attribute name="font-desc" value="&lt;Enter Value&gt; 12"/>
+                  <attribute name="weight" value="semibold"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkListStore" id="Tests">
+    <columns>
+      <!-- column-name TEST -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">GLU</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">ALB</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">LDH</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">TSH</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkDialog" id="Dialogo1">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Paciente</property>
+    <property name="modal">True</property>
+    <property name="window_position">center</property>
+    <property name="icon_name">document-new</property>
+    <property name="type_hint">dialog</property>
+    <property name="transient_for">Dialogo0</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="dialog-vbox4">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="dialog-action_area4">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="button4">
+                <property name="label" translatable="yes">Aceptar</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image_position">right</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button10">
+                <property name="label" translatable="yes">Cancelar</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="box11">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_bottom">12</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkGrid" id="grid1">
+                <property name="width_request">5</property>
+                <property name="height_request">75</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_top">28</property>
+                <property name="margin_bottom">53</property>
+                <property name="border_width">1</property>
+                <property name="row_spacing">25</property>
+                <property name="column_spacing">50</property>
+                <child>
+                  <object class="GtkLabel" id="label3">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Nombre</property>
+                    <property name="ellipsize">start</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label10">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Apellido</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label12">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Edad</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label13">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Test</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Nombre">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Apellido">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Edad">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="margin_right">125</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label11">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Sexo</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkGrid" id="grid2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="halign">center</property>
+                    <child>
+                      <object class="GtkRadioButton" id="radiobutton2">
+                        <property name="label" translatable="yes">Masculino</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">False</property>
+                        <property name="xalign">0</property>
+                        <property name="active">True</property>
+                        <property name="draw_indicator">True</property>
+                        <signal name="toggled" handler="on_buttonsexo_toggled" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkRadioButton" id="radiobutton1">
+                        <property name="label" translatable="yes">Femenino</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">False</property>
+                        <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                        <property name="xalign">0</property>
+                        <property name="active">True</property>
+                        <property name="draw_indicator">True</property>
+                        <property name="group">radiobutton2</property>
+                        <signal name="toggled" handler="on_buttonsexo_toggled" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Ubicación</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="button1">
+                    <property name="label" translatable="yes">Definir</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="on_definir_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label4">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="Prioridad">
+                    <property name="label" translatable="yes">Prioritario/Urgente</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                    <property name="margin_left">61</property>
+                    <property name="margin_right">1</property>
+                    <property name="xalign">0.0099999997764825821</property>
+                    <property name="image_position">right</property>
+                    <property name="draw_indicator">True</property>
+                    <signal name="toggled" handler="on_prioridad_toggled" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBox" id="combobox1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="model">Tests</property>
+                    <property name="tearoff_title" translatable="yes">Tests</property>
+                    <signal name="changed" handler="on_combobox1_changed" swapped="no"/>
+                    <child>
+                      <object class="GtkCellRendererText" id="cellrenderertext1"/>
+                      <attributes>
+                        <attribute name="text">0</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">4</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="padding">6</property>
+                <property name="pack_type">end</property>
+                <property name="position">-1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label14">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="ypad">3</property>
+                <property name="label" translatable="yes">Datos del paciente</property>
+                <property name="width_chars">6</property>
+                <property name="max_width_chars">5</property>
+                <property name="yalign">0.92000001668930054</property>
+                <attributes>
+                  <attribute name="font-desc" value="AnjaliOldLipi Bold Italic 10"/>
+                  <attribute name="weight" value="bold"/>
+                  <attribute name="foreground" value="#88888a8a8585"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="-5">button4</action-widget>
+      <action-widget response="-6">button10</action-widget>
+    </action-widgets>
+  </object>
+  <object class="GtkWindow" id="PosicionesMuestras">
+    <property name="width_request">800</property>
+    <property name="height_request">600</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Seleccion de posición</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="default_width">800</property>
+    <property name="default_height">600</property>
+    <property name="gravity">static</property>
+    <property name="transient_for">Dialogo1</property>
+    <property name="attached_to">Dialogo0</property>
+    <child>
+      <object class="GtkBox" id="box2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="margin_top">4</property>
+        <child>
+          <object class="GtkFixed" id="fixed1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkToggleButton" id="pos1">
+                <property name="name">1</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label7">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">1</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">404</property>
+                <property name="y">33</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos2">
+                <property name="name">2</property>
+                <property name="width_request">32</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label8">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_left">2</property>
+                    <property name="label" translatable="yes">2</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">442</property>
+                <property name="y">35</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos3">
+                <property name="name">3</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label9">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">3</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">478</property>
+                <property name="y">45</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos4">
+                <property name="name">4</property>
+                <property name="width_request">32</property>
+                <property name="height_request">32</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label15">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">4</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">512</property>
+                <property name="y">63</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos5">
+                <property name="name">5</property>
+                <property name="width_request">32</property>
+                <property name="height_request">32</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label16">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">5</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">544</property>
+                <property name="y">85</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos6">
+                <property name="name">6</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label17">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">6</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">571</property>
+                <property name="y">109</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos7">
+                <property name="name">7</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label18">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">7</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">595</property>
+                <property name="y">140</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos8">
+                <property name="name">8</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label19">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">8</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">613</property>
+                <property name="y">176</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos9">
+                <property name="name">9</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label20">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">9</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">627</property>
+                <property name="y">210</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos10">
+                <property name="name">10</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label21">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">10</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">631</property>
+                <property name="y">247</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos11">
+                <property name="name">11</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label22">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">11</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">635</property>
+                <property name="y">283</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos12">
+                <property name="name">12</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label23">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">12</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">629</property>
+                <property name="y">319</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos13">
+                <property name="name">13</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label24">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">13</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">622</property>
+                <property name="y">354</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos14">
+                <property name="name">14</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label25">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">14</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">612</property>
+                <property name="y">389</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos15">
+                <property name="name">15</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label26">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">15</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">599</property>
+                <property name="y">422</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos16">
+                <property name="name">16</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label27">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">16</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">574</property>
+                <property name="y">450</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos17">
+                <property name="name">17</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label28">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">17</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">545</property>
+                <property name="y">473</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos18">
+                <property name="name">18</property>
+                <property name="width_request">33</property>
+                <property name="height_request">35</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <property name="inconsistent">True</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label29">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">18</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">512</property>
+                <property name="y">490</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos19">
+                <property name="name">19</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label30">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">19</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">477</property>
+                <property name="y">504</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos20">
+                <property name="name">20</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label31">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">20</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">441</property>
+                <property name="y">513</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos21">
+                <property name="name">21</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <property name="relief">half</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label32">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">21</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">405</property>
+                <property name="y">519</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos22">
+                <property name="name">22</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label33">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">22</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">365</property>
+                <property name="y">520</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos23">
+                <property name="name">23</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label34">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">23</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">325</property>
+                <property name="y">511</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos24">
+                <property name="name">24</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label35">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">24</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">292</property>
+                <property name="y">497</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos25">
+                <property name="name">25</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label36">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">25</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">259</property>
+                <property name="y">477</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos26">
+                <property name="name">26</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label37">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">26</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">227</property>
+                <property name="y">451</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos27">
+                <property name="name">27</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label38">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">27</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">206</property>
+                <property name="y">418</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos28">
+                <property name="name">28</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label39">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">28</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">186</property>
+                <property name="y">384</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos29">
+                <property name="name">29</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label40">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">29</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">176</property>
+                <property name="y">349</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos30">
+                <property name="name">30</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label41">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">30</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">166</property>
+                <property name="y">312</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos31">
+                <property name="name">31</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label42">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">31</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">161</property>
+                <property name="y">276</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos32">
+                <property name="name">32</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label43">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">32</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">166</property>
+                <property name="y">238</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos33">
+                <property name="name">33</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label44">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">33</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">172</property>
+                <property name="y">202</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos34">
+                <property name="name">34</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label45">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">34</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">181</property>
+                <property name="y">165</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos35">
+                <property name="name">35</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label46">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">35</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">198</property>
+                <property name="y">129</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos36">
+                <property name="name">36</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label47">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">36</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">225</property>
+                <property name="y">101</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos37">
+                <property name="name">37</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label48">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">37</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">259</property>
+                <property name="y">77</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos38">
+                <property name="name">38</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label49">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">38</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">294</property>
+                <property name="y">58</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos39">
+                <property name="name">39</property>
+                <property name="width_request">34</property>
+                <property name="height_request">34</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label50">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">39</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">331</property>
+                <property name="y">45</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="pos40">
+                <property name="name">40</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="events">GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK</property>
+                <property name="halign">center</property>
+                <signal name="toggled" handler="on_posicion_clicked" swapped="no"/>
+                <child>
+                  <object class="GtkLabel" id="label51">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">40</property>
+                    <signal name="button-press-event" handler="on_posicion_clicked" swapped="no"/>
+                  </object>
+                </child>
+                <style>
+                  <class name="BotonPosicion"/>
+                </style>
+              </object>
+              <packing>
+                <property name="x">367</property>
+                <property name="y">39</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label6">
+                <property name="width_request">500</property>
+                <property name="height_request">80</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">SELECCIONE LA POSICION EN LA QUE SE ENCUENTRA LA MUESTRA
+</property>
+                <property name="justify">center</property>
+                <property name="ellipsize">start</property>
+                <attributes>
+                  <attribute name="font-desc" value="Ubuntu Medium 10"/>
+                  <attribute name="style" value="oblique"/>
+                  <attribute name="weight" value="bold"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="x">167</property>
+                <property name="y">265</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFixed" id="fixed2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkEventBox" id="eventbox1">
+                <property name="width_request">100</property>
+                <property name="height_request">80</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+              <packing>
+                <property name="x">77</property>
+                <property name="y">254</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
