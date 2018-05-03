@@ -1,0 +1,17 @@
+- - - - - - - - - - - - - - INFORME DE RESULTADO- - - - - - - - - - - - - - - - -
+                        Facultad de Ingenieria UNER
+                Catedra de Instrumental de Laboratorio Clinico
+
+*** DATOS ***
+Paciente: Juares  DElfina
+
+Edad:  88
+
+Sexo: Femenino
+
+Copa: 19
+
+
+*** RESULTADOS DE ANALISIS***
+Test                    Resultado                      Valores de refencia
+TSH			5 g/ml				2,8 - 10 mg/mL

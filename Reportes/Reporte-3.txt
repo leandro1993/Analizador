@@ -1,0 +1,17 @@
+- - - - - - - - - - - - - - INFORME DE RESULTADO- - - - - - - - - - - - - - - - -
+                        Facultad de Ingenieria UNER
+                Catedra de Instrumental de Laboratorio Clinico
+
+*** DATOS ***
+Paciente: Perez Juan 
+
+Edad: 33
+
+Sexo: Femenino
+
+Copa: 19
+
+
+*** RESULTADOS DE ANALISIS***
+Test                    Resultado                      Valores de refencia
+GLU			5 g/ml				2,8 - 10 mg/mL

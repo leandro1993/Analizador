@@ -1,0 +1,17 @@
+- - - - - - - - - - - - - - INFORME DE RESULTADO- - - - - - - - - - - - - - - - -
+                        Facultad de Ingenieria UNER
+                Catedra de Instrumental de Laboratorio Clinico
+
+*** DATOS ***
+Paciente:    
+
+Edad:  
+
+Sexo: Masculino
+
+Copa: 1
+
+
+*** RESULTADOS DE ANALISIS***
+Test                    Resultado                      Valores de refencia
+GLU			5 g/ml				2,8 - 10 mg/mL
